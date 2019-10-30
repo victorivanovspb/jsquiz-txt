@@ -31,7 +31,7 @@ typeof g();
 - [x] Error
 
 ---
-3
+№3
 
 ```
 (function(x){
@@ -40,38 +40,42 @@ typeof g();
 })(1);
 ```
 
-- [+] 1
+- [x] 1
 - [ ] null
 - [ ] undefined
 - [ ] Error
 
-
 -------------------------------------------------------------------------------
-Вопрос 4
+№4
 
+```
 var y = 1, x = y = typeof x;
 x;
+```
 
 - [ ] 1
 - [ ] "number"
 - [ ] undefined
-- [+] "undefined"
+- [x] "undefined"
 
 ---
-Вопрос 5
+№5
 
+```
 (function f(f){
     return typeof f();
 })(function(){ return 1; });
+```
 
-- [+] "number"
+- [x] "number"
 - [ ] "undefined"
 - [ ] "function"
 - [ ] Error
 
 ---
-Вопрос 6
+№6
 
+```
 var foo = {
     bar: function() { return this.baz; },
     baz: 1
@@ -79,8 +83,9 @@ var foo = {
 (function(){
     return typeof arguments[0]();
 })(foo.bar);
+```
 
-- [+] "undefined"
+- [x] "undefined"
 - [ ] "object"
 - [ ] "number"
 - [ ] "function"
@@ -96,7 +101,7 @@ var foo = {
 typeof (f = foo.bar)();
 ```
 
-- [+] "undefined"
+- [x] "undefined"
 - [ ] "object"
 - [ ] "number"
 - [ ] "function"
