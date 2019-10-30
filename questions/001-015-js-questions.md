@@ -1,10 +1,5 @@
-
-## Useful links 
-- http://perfectionkills.com/javascript-quiz/
-- learn.javascript.ru/quiz
-
-## Questions
-№1
+# Вопросы по JavaScript #1
+**№1**
 
 ```
 (function(){
@@ -18,7 +13,7 @@
 - [ ] "undefined"
 
 ---
-№2
+**№2**
 
 ```
 var f = function g(){ return 23; };
@@ -31,7 +26,7 @@ typeof g();
 - [x] Error
 
 ---
-№3
+**№3**
 
 ```
 (function(x){
@@ -45,8 +40,8 @@ typeof g();
 - [ ] undefined
 - [ ] Error
 
--------------------------------------------------------------------------------
-№4
+---
+**№4**
 
 ```
 var y = 1, x = y = typeof x;
@@ -59,7 +54,7 @@ x;
 - [x] "undefined"
 
 ---
-№5
+**№5**
 
 ```
 (function f(f){
@@ -73,7 +68,7 @@ x;
 - [ ] Error
 
 ---
-№6
+**№6**
 
 ```
 var foo = {
@@ -91,7 +86,7 @@ var foo = {
 - [ ] "function"
 
 ---
-№7
+**№7**
 
 ```
 var foo = {
@@ -107,7 +102,7 @@ typeof (f = foo.bar)();
 - [ ] "function"
 
 ---
-№8
+**№8**
 
 ```
 var f = (function f(){ return "1"; }, function g(){ return 2; })();
@@ -120,7 +115,7 @@ typeof f;
 - [ ] "undefined"
 
 ---
-№9
+**№9**
 
 ```
 var x = 1;
@@ -136,7 +131,7 @@ x;
 - [ ] NaN
 
 ---
-№10
+**№10**
 
 ```
 var x = [typeof x, typeof y][1];
@@ -149,7 +144,7 @@ typeof typeof x;
 - [ ] "object"
 
 ---
-№11
+**№11**
 
 ```
 (function(foo){
@@ -163,7 +158,7 @@ typeof typeof x;
 - [ ] Error
 
 ---
-№12
+**№12**
 
 ```
 (function f(){
@@ -179,7 +174,7 @@ typeof typeof x;
 - [ ] undefined
 
 ---
-№13
+**№13**
 
 ```
 function f(){ return f; }
@@ -190,7 +185,7 @@ new f() instanceof f;
 - [x] false
 
 ---
-№14
+**№14**
 
 ```
 with (function(x, undefined){}) length;
@@ -205,7 +200,7 @@ with (function(x, undefined){}) length;
 Function.length возвращает кол-во ожидаемых функцией аргументов.
 
 ---
-№15. Чему равен результат вызова в этом примере?
+**№15** Чему равен результат вызова в этом примере?
 
 ```
 function f() {
@@ -220,5 +215,3 @@ alert( f()(1) );
 - [ ] undefined
 - [ ] NaN
 - [x] Будет ошибка.
-
-
