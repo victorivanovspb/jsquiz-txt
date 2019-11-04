@@ -69,5 +69,193 @@ console.log(numbers.length);
 - [ ] -1 
 
 ---
+**№36** Что будет результатом выполнения следующего кода?
 
-...
+```
+let user = {
+    name: "Max",
+    go: function() {
+        return this.name;
+    }
+}
+
+(user.go)();
+```
+
+- [ ] undefined
+- [x] Возникнет ошибка
+- [ ] Max
+
+ReferenceError: can't access lexical declaration 'user' before initialization.  
+Стоит разделить точкой с запятой объявление объекта и вызов метода. 
+
+---
+**№37** Что будет результатом выполнения следующего кода?
+
+```
+let user = {
+    name: "Max",
+    go: function() {
+        return this.name;
+    }
+};
+
+(user.go)();
+```
+
+- [ ] undefined
+- [ ] Возникнет ошибка
+- [x] Max
+
+---
+**№38** Что будет результатом выполнения следующего кода?
+
+```
+let user = {
+    name: "Max",
+    go: () => this.name
+};
+
+user.go();
+```
+
+- [x] undefined
+- [ ] Возникнет ошибка
+- [ ] Max
+
+---
+
+**№39** Что будет результатом выполнения следующего кода?
+
+```
+let user = {
+    name: "Max",
+    go: () => this.name
+};
+let obj = {
+    name: "Alex",
+};
+user.go.call(obj);
+
+```
+
+- [ ] undefined
+- [ ] Возникнет ошибка
+- [x] ""
+- [ ] Max
+- [ ] Alex
+
+---
+
+**№40** Что будет результатом выполнения следующего кода?
+
+```
+let user = {
+    name: "Max",
+    go: function () {
+        return this.name;
+    }
+};
+
+let obj = {
+    name: "Alex",
+};
+
+user.go.call(obj);
+```
+
+- [ ] undefined
+- [ ] Возникнет ошибка
+- [x] ""
+- [ ] Max
+- [ ] Alex
+
+---
+41
+```
+var a = {
+    name: 'a',
+    foo: function () {
+        console.log(this.name);
+    }
+};
+
+a.foo();
+```
+
+- [ ] Возникнет ошибка
+- [ ] undefined
+- [x] "a"
+- [ ] ""
+
+---
+42
+```
+var a = {
+    name: 'a',
+    foo: function () {
+        console.log(this.name);
+    }
+};
+
+var bar = a.foo;
+bar();
+```
+
+- [ ] Возникнет ошибка
+- [x] undefined
+- [ ] "a"
+- [ ] ""
+
+---
+43
+```
+var a = {
+    name: 'a',
+    foo: function () {
+        console.log(this.name);
+    }
+};
+
+var b = {
+    name: 'b'
+};
+
+b.foo = a.foo;
+b.foo();
+```
+
+- [ ] Возникнет ошибка
+- [ ] undefined
+- [ ] "a"
+- [x] "b"
+- [ ] ""
+
+---
+44
+```
+var a = {
+    name: 'a',
+    foo: function () {
+        console.log(this.name);
+    }
+};
+
+var bar = a.foo;
+var c = {
+    name: 'c'
+};
+bar.call(c);
+```
+
+- [ ] Возникнет ошибка
+- [ ] undefined
+- [ ] "a"
+- [x] "c"
+- [ ] ""
+
+---
+
+a.foo.apply(b); // 'b'
+a.foo.bind(b).call(c); // 'b'
+a.foo.bind(b).bind(c)(); // 'b'
