@@ -1,4 +1,4 @@
-# quiz-js
+# jsquiz-txt
 Вопросы на знание JavaScript (JS test questions)
 
 - [Index](./questions/README.md)
